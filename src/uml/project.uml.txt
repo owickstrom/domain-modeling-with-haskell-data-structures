@@ -1,5 +1,5 @@
 @startuml
-Project <|-- SingleProject : constructor of
-Project <|-- ProjectGroup : constructor of
+Project <|-- SingleProject : is a
+Project <|-- ProjectGroup : is a
 Project o-- ProjectGroup : has many
 @enduml

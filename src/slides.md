@@ -59,10 +59,80 @@ classoption: dvipsnames
 
 ![](../uml/project.png){width=50%}
 
-## Project Managament Data Types
+## Project
 
 ``` {.haskell include=src/listings/data-structures/src/Project.hs snippet=project}
 ```
+
+## Budget
+
+``` {.haskell include=src/listings/data-structures/src/Project.hs snippet=budget}
+```
+
+## Transaction
+
+``` {.haskell include=src/listings/data-structures/src/Project.hs snippet=transaction}
+```
+
+## Reporting
+
+``` {.haskell include=src/listings/data-structures/src/Reporting.hs snippet=report}
+```
+
+## Calculating a Report
+
+``` {.haskell include=src/listings/data-structures/src/Reporting.hs snippet=calculateReport}
+```
+
+## Aggregating Reports
+
+``` {.haskell include=src/listings/data-structures/src/Reporting.hs snippet=calculateProjectReport}
+```
+
+## Printing Projects
+
+``` {.haskell include=src/listings/data-structures/src/PrettyPrint.hs snippet=tree}
+```
+
+## Printing Projects in the REPL
+
+\verbatimfont{\small}
+```
+*Demo> putStrLn (prettyProject someProject)
+Sweden
+|
++- Stockholm (1)
+|
++- Gothenburg (2)
+|
+`- Malmö
+   |
+   +- Malmö City (3)
+   |
+   `- Limhamn (4)
+```
+
+## Printing Reports
+
+``` {.haskell include=src/listings/data-structures/src/PrettyPrint.hs snippet=prettyReport}
+```
+
+## Printing Reports in the REPL
+
+\verbatimfont{\small}
+```
+*Demo> p <- calculateProjectReport someProject
+*Demo> putStrLn (prettyReport p)
+Budget: -14904.17, Net: 458.03, difference: +15362.20
+```
+
+## What we've used so far
+
+* Basic Haskell data types
+* Explicit recursion
+* Monoid
+* Functor
+* Foldable
 
 # Questions?
 
