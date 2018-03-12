@@ -1,0 +1,49 @@
+digraph checkout_fsm {
+  splines=true;
+  compound=true;
+  rankdir=LR;
+
+  edge [ fontname = "Cabin Italic" ];
+  node [ fontname = "Cabin Bold" ];
+  graph [ fontname = "Cabin", fontcolor = "gray50" ];
+
+  node [shape = point, width = .25, height = .25 ];
+  Initial;
+  End [peripheries=2];
+
+  node [shape = circle, dmargin=0, width=0.5, height=0.5 ];
+
+  subgraph cluster0 {
+    style=rounded;
+    color=black;
+    label = "Checkout";
+
+    NoCard [ label = "No\nCard" ];
+    CardSelected [ label = "Card\nSelected" ];
+    CardConfirmed [ label = "Card\nConfirmed" ];
+  }
+
+  NoItems [ label = "No\nItems" ];
+  HasItems [ label = "Has\nItems" ];
+  OrderPlaced [ label = "Order\nPlaced" ];
+  invis_checkout [ style=invis, label="" ];
+
+  Initial -> NoItems;
+
+  NoItems -> HasItems [ label = "select" ];
+  HasItems -> HasItems [ label = "select" ];
+  HasItems -> NoCard [ headlabel = "checkout  " ];
+  
+  invis_checkout -> NoCard [ style=invis ];
+
+  CardSelected -> CardConfirmed [ label = "confirm" ];
+  NoCard -> CardSelected [ label = "selectCard" ];
+
+  # just for placement.
+  CardSelected -> HasItems [ label = "cancel", ltail=cluster0 ];
+
+  CardConfirmed -> OrderPlaced [ label = "placeOrder" ];
+  OrderPlaced -> End;
+
+  {rank=same Initial} -> {rank=same NoItems invis_checkout} -> {rank=same OrderPlaced} [style=invis]
+}

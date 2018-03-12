@@ -1,0 +1,5 @@
+@startuml
+Project <|-- SingleProject : constructor of
+Project <|-- ProjectGroup : constructor of
+Project o-- ProjectGroup : has many
+@enduml

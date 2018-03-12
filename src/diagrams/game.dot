@@ -1,0 +1,24 @@
+digraph game_fsm {
+  graph [ dpi = 300 ];
+  splines=true;
+  esep=5;
+  rankdir=LR;
+
+  size="8,5";
+
+  edge [ fontname = "Cabin Italic" ];
+  node [ fontname = "Cabin Bold" ];
+
+  node [shape = point, width = .25, height = .25 ];
+  Start;
+
+  node [shape = circle];
+  Standing Jumping Ducking;
+
+  Start -> Standing;
+  Standing -> Jumping  [ label = "Press Space" ];
+  Jumping  -> Standing [ label = "(Hit Ground)" ];
+  Standing -> Ducking  [ label = "Press Down" ];
+  Ducking  -> Standing [ label = "Release Down" ];
+  Ducking  -> Jumping  [ label = "Press Space" ];
+}

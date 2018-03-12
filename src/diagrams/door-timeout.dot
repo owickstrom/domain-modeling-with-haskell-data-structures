@@ -1,0 +1,22 @@
+digraph door_timeout_fsm {
+  graph [ dpi = 300 ];
+  esep=1;
+  splines=true;
+  compound=true;
+  rankdir=LR;
+
+  edge [ fontname = "Cabin Italic" ];
+  node [ fontname = "Cabin Bold" ];
+  graph [ fontname = "Cabin", fontcolor = "gray50" ];
+
+  node [shape = point, width = .25, height = .25 ];
+  Initial;
+
+  node [shape = circle, dmargin=0, width=0.5, height=0.5 ];
+
+  Closed -> Open [ label = "\nopen\n" ];
+  Open -> Closed [ label = "\nclose\n" ];
+  Open -> Closed [ label = "\ntimeout\n" ];
+
+  Initial -> Closed;
+}
