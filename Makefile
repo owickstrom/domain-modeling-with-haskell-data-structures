@@ -1,4 +1,4 @@
-TEX=pdflatex
+TEX=xelatex
 PLANTUML=deps/plantuml.jar
 
 MASTER=src/master.tex

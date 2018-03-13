@@ -6,8 +6,6 @@ theme: Boadilla
 classoption: dvipsnames
 ---
 
-# Domain Modeling with Haskell Data Structures
-
 ## Domain Modeling
 
 * Clear and unambious naming
@@ -29,8 +27,8 @@ classoption: dvipsnames
 * Separation with data types:
     - Separate bounded contexts using different data types
     - Define explicit interfaces and translations between them
+* Structure computation as data structures
 * Use modules for cohesive units
-    - What could be classes in OOP
     - Domain logic, repositories/data access, rendering
     - Capture interfaces and responsibilities using type classes
     - Avoid the `Types.hs` trap

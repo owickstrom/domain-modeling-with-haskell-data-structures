@@ -21,8 +21,9 @@
 \usepackage{pgfpages}
 
 \usepackage[T1]{fontenc}
-\usepackage[sfdefault]{noto}
-\usepackage[scaled=1.15]{inconsolata}
+\usepackage[default]{sourcesanspro}
+\usepackage{fontspec}
+\setmonofont[Mapping=tex-text]{Iosevka Term Medium}
 
 
 \usepackage{array}
@@ -106,20 +107,21 @@
   \endgroup
 }
 
-\definecolor{typecolor}{HTML}{5200FF}
+\definecolor{typecolor}{HTML}{0074DE}
 \definecolor{functioncolor}{HTML}{924C9D}
 \definecolor{stringcolor}{HTML}{E81C4F}
 \definecolor{numbercolor}{HTML}{0095FF}
-\definecolor{othercolor}{HTML}{444444}
+\definecolor{othercolor}{HTML}{5200FF}
 
-\renewcommand{\KeywordTok}[1]{\textbf{#1}}
+\renewcommand{\NormalTok}[1]{\textcolor{textcolor}{#1}}
+\renewcommand{\KeywordTok}[1]{\textcolor{textcolor}{#1}}
 \renewcommand{\FunctionTok}[1]{\textcolor{functioncolor}{#1}}
 \renewcommand{\DataTypeTok}[1]{\textcolor{typecolor}{#1}}
 \renewcommand{\CommentTok}[1]{\textcolor{mediumgray}{#1}}
 \renewcommand{\StringTok}[1]{\textcolor{stringcolor}{#1}}
 \renewcommand{\DecValTok}[1]{\textcolor{numbercolor}{#1}}
-\renewcommand{\OtherTok}[1]{#1}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\linespread{1.05}\footnotesize}
+\renewcommand{\OtherTok}[1]{\textcolor{othercolor}{#1}}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\linespread{1.1}\small}
 
 \makeatletter
 \newcommand{\verbatimfont}[1]{\renewcommand{\verbatim@font}{\linespread{1.2}\ttfamily#1}}
