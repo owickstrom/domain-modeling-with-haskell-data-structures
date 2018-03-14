@@ -308,11 +308,11 @@ Fix :: f (Mu f) -> Mu f
 *Demo> pr <- calculateProjectReports someProject
 *Demo> drawTreeWith prettyResult pr
  \-- Sweden: Budget: +2191.60, Net: +1238.19, difference: -953.41
-      |-- Stockholm (1): Budget: +5092.27, Net: -1472.80, difference: -6565.07
-      |-- Gothenburg (2): Budget: -4325.22, Net: +2252.52, difference: +6577.74
+      |-- Stockholm (1): Budget: +5092.27, Net: -1472.80, difference: -656 ...
+      |-- Gothenburg (2): Budget: -4325.22, Net: +2252.52, difference: +65 ...
       \-- Malmö: Budget: +1424.55, Net: +458.47, difference: -966.08
-           |-- Malmö City (3): Budget: -6456.93, Net: +2400.33, difference: +8857.26
-           \-- Limhamn (4): Budget: +7881.48, Net: -1941.86, difference: -9823.34
+           |-- Malmö City (3): Budget: -6456.93, Net: +2400.33, difference ...
+           \-- Limhamn (4): Budget: +7881.48, Net: -1941.86, difference: - ...
 ```
 
 ## Summary

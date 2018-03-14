@@ -21,8 +21,8 @@
 \usepackage{pgfpages}
 
 \usepackage[T1]{fontenc}
-\usepackage[default]{sourcesanspro}
 \usepackage{fontspec}
+\setsansfont[Mapping=tex-text]{Source Sans Pro}
 \setmonofont[Mapping=tex-text]{Iosevka Term Medium}
 
 
@@ -38,7 +38,7 @@
 
 \setbeamercolor{frametitle}{fg=white,bg=topbarcolor}
 \setbeamerfont{frametitle}{size=\fontsize{12pt}{12pt}}
-\addtobeamertemplate{frametitle}{\vskip-0.5ex}{}
+\addtobeamertemplate{frametitle}{\vskip-1ex}{}
 
 \setbeamercolor{title page}{bg=sectionbg}
 \setbeamercolor{headline}{fg=white}
@@ -121,7 +121,7 @@
 \renewcommand{\StringTok}[1]{\textcolor{stringcolor}{#1}}
 \renewcommand{\DecValTok}[1]{\textcolor{numbercolor}{#1}}
 \renewcommand{\OtherTok}[1]{\textcolor{othercolor}{#1}}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\linespread{1.1}\small}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\linespread{1}\normalsize}
 
 \makeatletter
 \newcommand{\verbatimfont}[1]{\renewcommand{\verbatim@font}{\linespread{1.2}\color{textcolor}\ttfamily#1}}
