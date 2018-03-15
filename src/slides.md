@@ -8,7 +8,7 @@ classoption: dvipsnames
 
 ## Domain Modeling
 
-* Clear and unambious naming
+* Clear and unambigous naming
 * Reify the domain we are working with in our code
 * Separate bounded contexts
 
@@ -119,8 +119,8 @@ Sweden
 
 \verbatimfont{\small}
 ```
-*Demo> p <- calculateProjectReport someProject
-*Demo> putStrLn (prettyReport p)
+*Demo> r <- calculateProjectReport someProject
+*Demo> putStrLn (prettyReport r)
 Budget: -14904.17, Net: 458.03, difference: +15362.20
 ```
 
